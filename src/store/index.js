@@ -2,7 +2,7 @@ import { createStore } from "vuex";
 
 export default createStore({
   state: {
-    appliances: []
+    appliances: null,
   },
   getters: {
     appliances(state) {
@@ -21,8 +21,6 @@ export default createStore({
         const res = await fetch('https://lazola2.github.io/appliancesAPI/randomAppliances.json');
         const data = await res.json();
         context.commit('setAppliances', data.appliances);
-        // setAppliances(state, data)
-        // console.log(data);
       } catch (err) {
         console.error(err);
       }

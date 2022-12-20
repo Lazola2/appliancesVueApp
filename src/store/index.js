@@ -12,7 +12,6 @@ export default createStore({
   mutations: {
     setAppliances(state, appliances){
       state.appliances = appliances;
-      console.log(appliances);
     }
   },
   actions: {
